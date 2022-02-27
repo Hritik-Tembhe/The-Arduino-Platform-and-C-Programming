@@ -1,0 +1,28 @@
+/* The Program for printing the first 6 fibonacci numbers */
+
+#include<stdio.h>
+
+int fib(int n){
+    int fno = 0;
+    if(n==1){
+        fno = 0;
+    }
+    else if(n==2){
+        fno = 1;
+    }
+    else{
+        fno = fib(n-1)+fib(n-2);
+    }
+    return fno;
+}
+
+int main(){
+    int n = 6;
+    printf("Then first %d fibonacci numbers are: \n", n);
+    for(int i=1;i<=6;i++){
+        int fno = fib(i);
+        printf("%d\n",fno);
+    }
+    return 0;
+}
+
